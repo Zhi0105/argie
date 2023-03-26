@@ -1,17 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { AiFillGithub } from 'react-icons/ai'
 import RouteStore from '../Store/RouteStore'
 import { motion } from 'framer-motion'
+import _ from 'lodash'
 
 export const Navbar = () => {
 
-  const { route } = RouteStore();
+    const { route } = RouteStore(); // ROUTE STORE
+    let routeDebounce = _.debounce(() => { return ;}, 500) // NAVIGATION HIDE within 0.5 sec if route === /
 
-  if(route.pathname === '/') {
-    return ;
-  }
-  
+    if(route.pathname === '/') {
+        return routeDebounce()
+    }
+
   return (
     <div className='navbar_menu flex justify-between text-sm md:hidden sm:hidden p-4 shadow-sm'>
         <div>
@@ -56,12 +57,6 @@ export const Navbar = () => {
                     Contact
                 </Link>
             </motion.div>
-            <Link className='font-bold'>
-                |
-            </Link>
-            <Link to="https://github.com/Zhi0105" target="_blank">
-                <AiFillGithub size={18}/>
-            </Link>
         </div>
     </div>  
   )
