@@ -3,74 +3,107 @@ import { FaFacebook, FaLinkedin, FaGithub } from 'react-icons/fa'
 import { MdMail } from 'react-icons/md'
 import { Link } from 'react-router-dom'
 import { downloadCV } from '../../../utils/helpers'
+import { DevImage } from '../../Lazy/LazyImage'
+import { motion } from 'framer-motion'
+import { IteratedText } from '../../Partials/IteratedText'
+import Typical from 'react-typical'
 
 export const Index = () => {
+  
   return (
-    <div className='index_main min-h-screen flex flex-row justify-around items-center'>
-      
+    <div className='index_main min-h-screen flex flex-row justify-evenly items-center'>
       <div className="greet_container flex flex-col gap-4 text-white">
 
-        {/* START GREET */}
-        <div className='greet_detail font-bold text-2xl'>
-            <div>
-              Hello, It's Me
-            </div>
+          <motion.div
+            animate={{ 
+              y: [ 100, 70, 50, 0 ],
+              opacity: [0, 0.1, 0.5, 1]
+            }}
+            transition={{ type: "spring", stiffness: 400, delay: 2, duration: 1, ease: "easeInOut" }}
+          >
+            <IteratedText 
+                text="Hello," 
+                styles="greet_detail flex flex-row font-bold text-5xl"
+              />
+          </motion.div>
+
+
+        <div className='greet_detail_fullname flex flex-row gap-2 font-bold text-6xl'>
+            <motion.div
+              animate={{ 
+                x: [-100, 0],
+                opacity: [0, 0.1, 0.5, 1],
+                rotate: [0, 360],
+              }}
+              transition={{ type: "spring", stiffness: 400, delay: 2.5, duration: 1, ease: "easeInOut" }}
+            >
+              <IteratedText 
+                text="I'm"
+                styles="flex flex-row"
+              />
+            </motion.div>
+
+            <motion.div
+              animate={{ 
+                x: [-100, 0],
+                opacity: [0, 0.1, 0.5, 1],
+                rotate: [0, 360],
+              }}
+              transition={{ type: "spring", stiffness: 400, delay: 2.8, duration: 1, ease: "easeInOut" }}
+            >
+              <IteratedText 
+                text="Argie,"
+                styles="flex flex-row"
+              />  
+            </motion.div>
         </div>
-        {/*  END GREET  */}
 
-        {/* START NAME */}
-        <div className='greet_detail_fullname flex flex-row gap-2 font-bold text-5xl'>
-            <div className='flex flex-row'>
-              <div>A</div>
-              <div>r</div>
-              <div>g</div>
-              <div>i</div>
-              <div>e</div>
-            </div>
-            <div className='flex flex-row'>
-              <div>B</div>
-              <div>a</div>
-              <div>r</div>
-              <div>c</div>
-              <div>e</div>
-              <div>n</div>
-              <div>a</div>
 
-            </div>
+        <div className='greet_detail_occupation flex flex-row gap-2 font-bold text-4xl'>
+            <motion.div
+              animate={{ 
+                y: [ -100, -70, -50, 0 ],
+                opacity: [0, 0.1, 0.5, 1]
+              }}
+              transition={{ type: "spring", stiffness: 300, delay: 2.9, duration: 1, ease: "easeInOut" }}
+            >
+              <IteratedText text="And I'm a" styles="flex flex-row" />
+            </motion.div>
+
+            <motion.div
+              animate={{ opacity: [0, 0.3, 0.5, 0.7, 1] }}
+              transition={{ type: "tween", duration: 2, delay: 3, ease: "easeInOut" }}
+            >
+              <IteratedText text="Software Developer"styles="flex flex-row text-[#0ea5e9]" />
+            </motion.div>
         </div>
-
-        {/* END NAME */}
-
-        {/* START POSITION */}
-        <div className='greet_detail_occupation font-bold text-2xl'>
-          <div>
-            And I'm a <label className='text-[#0ea5e9]'>Software Developer</label>
-          </div>
+        <div className='other_info flex flex-col'>
+              <label>Never stop learning.</label>
+              <Typical
+                steps={['Focus on being productive instead of being busy.', 1000, "It’s not a bug — it’s an undocumented feature.", 1000]}
+                loop={Infinity}
+                wrapper="p"
+              />
         </div>
-        {/*  END POSITION  */}
         
 
-        {/* START GREET */}
-        <div className='other_info flex flex-col'>
-          <div>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod.
-          </div>
-          <div>
-            Lorem ipsum dolor asdasd
-          </div>
-        </div>
-      {/*  END GREET  */}
-
-      {/* ICONS START */}
-      <div className='links flex flex-row gap-4'>
+        {/* ICONS START */}
+        <div className='links flex flex-row gap-4'>
         <Link to="https://www.linkedin.com/in/argie-barcena/" target='_blank'><FaLinkedin size={28} color='#06b6d4' /></Link>
         <Link to="https://www.facebook.com/aia.argie" target='_blank'><FaFacebook size={28} color='#06b6d4' /></Link>
         <Link to="#"><MdMail size={28} color='#06b6d4' /></Link>
         <Link to="https://github.com/Zhi0105" target='_blank'><FaGithub size={28} color='#06b6d4' /></Link>
-      </div>
-      {/* ICONS END */}
+        </div>
+        {/* ICONS END */}
 
-      <div className="cv_download">
+        <motion.div 
+          className="cv_download"
+          animate={{ 
+            y: [ 100, 70, 50, 0 ],
+            opacity: [0, 0.1, 0.5, 1]
+          }}
+          transition={{ type: "tween", delay: 4.5, duration: 1, ease: "easeInOut" }}
+        >
         <button onClick={() => downloadCV('http://localhost:3000/public/argie.pdf')} 
         className="relative inline-flex items-center justify-center p-4 px-8 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-[#06B6D4] rounded-full shadow-md group"
         >
@@ -80,13 +113,27 @@ export const Index = () => {
           <span className="absolute flex items-center justify-center w-full h-full text-white transition-all duration-300 transform group-hover:translate-x-full ease">Download CV</span>
           <span className="relative invisible">Download CV</span>
         </button>
-      </div>
-      
-      </div>        
+        </motion.div>
 
-      <div className='text-white'>
-        Image goes here!
-      </div>
+      </div>    
+      <motion.div 
+        className='landing_image text-white animate-pulse'
+        animate={{
+          scale: [1, 2, 2, 1, 1],
+          opacity: [0, 0.1, 0.5, 1]
+        }}
+        transition={{
+          duration: 2.5,
+          delay: 4
+        }}
+        >
+        <DevImage 
+          width={500}
+          height={500}
+        />
+      </motion.div>
+    
+
     
     </div>
   )
