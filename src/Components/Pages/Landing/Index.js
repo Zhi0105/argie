@@ -24,7 +24,7 @@ export const Index = () => {
             <IteratedText 
                 text="Hello," 
                 styles="greet_detail flex flex-row font-bold text-5xl"
-              />
+            />
           </motion.div>
 
 
@@ -74,7 +74,7 @@ export const Index = () => {
               animate={{ opacity: [0, 0.3, 0.5, 0.7, 1] }}
               transition={{ type: "tween", duration: 2, delay: 3, ease: "easeInOut" }}
             >
-              <IteratedText text="Software Developer"styles="flex flex-row text-[#0ea5e9]" />
+              <IteratedText text="Software Developer"styles="flex flex-row text-[#3b82f6]" />
             </motion.div>
         </div>
         <div className='other_info flex flex-col'>
@@ -102,7 +102,7 @@ export const Index = () => {
             y: [ 100, 70, 50, 0 ],
             opacity: [0, 0.1, 0.5, 1]
           }}
-          transition={{ type: "tween", delay: 4.5, duration: 1, ease: "easeInOut" }}
+          transition={{ type: "tween", delay: 6, duration: 1, ease: "easeInOut" }}
         >
         <button onClick={() => downloadCV('http://localhost:3000/public/argie.pdf')} 
         className="relative inline-flex items-center justify-center p-4 px-8 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out border-2 border-[#06B6D4] rounded-full shadow-md group"
@@ -127,10 +127,12 @@ export const Index = () => {
           delay: 4
         }}
         >
-        <DevImage 
-          width={500}
-          height={500}
-        />
+        <Link to="/about">
+          <DevImage 
+            width={500}
+            height={500}
+          />
+        </Link>
       </motion.div>
     
 

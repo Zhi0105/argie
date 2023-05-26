@@ -26,7 +26,7 @@ export const AnimatedHover = ({ children }) => {
   return   (
     <motion.span
       animate={controls}
-      whileHover={{ color: "#fb923c", cursor: "pointer" }}
+      whileHover={{  cursor: "pointer" }}
       onMouseOver={() => {
         if(!isPlaying)
           rubber()
