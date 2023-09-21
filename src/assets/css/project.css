@@ -1,0 +1,114 @@
+/* General style */
+.uxhover {
+  width:100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+}
+
+.uxhover .description,
+.uxhover .content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0
+}
+
+.uxhover img {
+  height: 100%;
+  display: block;
+  position: relative
+}
+
+.uxhover h2 {
+  text-transform: uppercase;
+  color: #08FFD4;
+  text-align: center;
+  position: relative;
+  padding: .5rem;
+  margin: .5rem 0 0 0
+}
+
+.uxhover p {
+  position: relative;
+  color: #fff;
+  padding: 0 .5rem 0;
+  text-align: center
+}
+
+.uxhover a.info {
+  display: inline-block;
+  text-decoration: none;
+  background: #000;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+
+/* Effect 3*/
+
+.image-container img {
+	/* width: 100%; */
+  height: 100%;
+  object-fit: cover;
+  transform: scaleY(1);
+  transition: all .7s ease-in-out;
+}
+
+.image-container .description {
+  /* background-color: #1D1D1D; */
+  transition: all 0.5s linear;
+  opacity: 0;
+  height:100%;
+}
+
+.description > h2{
+  font-weight: bold;
+}
+
+.image-container h2 {
+  background: transparent;
+  transform: scale(0);
+  transition: all 0.5s linear;
+  opacity: 0;
+}
+
+.image-container p {
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.5s linear;
+  /* padding- */
+}
+
+
+.image-container a.info {
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.5s linear;
+}
+
+/* Effect 3:hover*/
+
+.image-container:hover img {
+  -webkit-transform: scale(10);
+  transform: scale(10);
+  opacity: 0;
+}
+
+.image-container:hover .description {
+  opacity: 1;
+}
+
+.image-container:hover h2,
+.image-container:hover p,
+.image-container:hover a.info {
+  transform: scale(1);
+  opacity: 1;
+}
