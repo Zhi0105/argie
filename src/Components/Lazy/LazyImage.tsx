@@ -2,7 +2,6 @@ import { LazyLoadImage } from 'react-lazy-load-image-component'
 import { FC } from 'react';
 
 // IMAGES
-import Dev from '@_assets/dev.webp'
 import initial from '@_assets/rg.webp'
 import html from '@_assets/skills/html.webp'
 import css from '@_assets/skills/css.webp'
@@ -36,18 +35,6 @@ interface imageInterface {
   height?: number
 }
 
-export const DevImage: FC<imageInterface> = ({ width, height }) => {
-  return (
-    <div>
-      <LazyLoadImage 
-        src={Dev}
-        alt="Dev image"
-        height={height}
-        width={width}
-      />
-    </div>
-  )
-}
 export const Initial: FC<imageInterface> = ({ width, height }) => {
   return (
     <div>

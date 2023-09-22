@@ -50,7 +50,7 @@ const NavIcons: FC<NavIconInterface> = ({ name }) => {
 return (
   <>
     {/* DESKTOP */}
-    <div className='navbar_menu bg-[#1D1D1D] xs:hidden sm:hidden md:hidden lg:flex xl:flex 2xl:flex justify-between items-center text-sm p-4 border-b-2'>
+    <div className='navbar_menu w-screen bg-[#1D1D1D] xs:hidden sm:hidden md:hidden lg:flex xl:flex 2xl:flex justify-between items-center text-sm p-4 border-b-2 fixed z-10'>
         <div>
         <Link to="/">
             <Initial width={50} height={50} />
@@ -75,25 +75,25 @@ return (
     </div>  
     {/* DESKTOP */}
       {/* MOBILE */}
-      <div className='mobile_navbar_wrapper w-screen xs:flex sm:flex md:flex lg:hidden xl:hidden bg-gray-300 text-black fixed bottom-0'>
-          <div className='mobile_navbar_items w-full text-sm flex justify-evenly py-4 px-4'>
-              {Links.map((link, index) => {
-                  return (
-                  <Link
-                      className={`font-bold flex flex-col text-center capitalize ${activeRoute === link.title && 'text-[#d97706]'}`}
-                      onClick={() => setActiveRoute(link.title)}
-                      to={`/${link.title}`}
-                      key={index}
-                  >
-                      <NavIcons 
-                          name={link.title} 
-                      />
-                      <label>{link.title}</label>
-                  </Link>
-                  )
-              })}
-          </div>
-      </div>
+        <div className='mobile_navbar_wrapper w-screen xs:flex sm:flex md:flex lg:hidden xl:hidden bg-gray-300 text-black fixed bottom-0 z-10'>
+            <div className='mobile_navbar_items w-full text-sm flex justify-evenly py-4 px-4'>
+                {Links.map((link, index) => {
+                    return (
+                    <Link
+                        className={`font-bold flex flex-col text-center capitalize ${activeRoute === link.title && 'text-[#d97706]'}`}
+                        onClick={() => setActiveRoute(link.title)}
+                        to={`/${link.title}`}
+                        key={index}
+                    >
+                        <NavIcons 
+                            name={link.title} 
+                        />
+                        <label>{link.title}</label>
+                    </Link>
+                    )
+                })}
+            </div>
+        </div>
       {/* MOBILE */}
   </>
 )

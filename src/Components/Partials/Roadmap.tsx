@@ -20,7 +20,7 @@ import { MapCards } from "./cards/MapCards"
 export const Roadmap = () => {
   return (
     <div className="roadmap_main pt-5">
-      <div className="card_container bg-[#1D1D1D] p-6 grid grid-cols-5 gap-4 shadow-2xl">
+      <div className="card_container bg-[#1D1D1D] p-6 grid xs:grid-cols-3 sm:grid-cols-3 md:grid-cols-4 grid-cols-5 gap-4 shadow-2xl">
         <MapCards image={ <Html width={50} height={50}/> } text={'HTML'} />
         <MapCards image={ <Css width={45} height={45}/> } text={'CSS'} />
         <MapCards image={ <Js width={50} height={50}/> } text={'Javascript'} />

@@ -1,15 +1,15 @@
 import { IteratedText } from "@_components/Partials/IteratedText"
+import { LatopModel } from "@_src/Components/Partials/LaptopModel"
 
 export const About = () => {
   return (
     <div className='about_main min-h-screen min-w-screen grid grid-cols-1 place-items-center px-8'>
       <div 
-        className='index_container h-full w-full grid grid-cols-2
+        className='about_container h-full w-full mt-12 grid grid-cols-2
           xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2
         '
       > 
-
-          <div className='flex flex-col gap-8 py-16 px-4 text-white'>
+          <div className='flex flex-col gap-8 justify-center px-4 text-white'>
               <IteratedText 
                 text="Me, Myself & I" 
                 styles="greet_detail text-[#08FFD4] flex flex-row font-bold text-6xl"
@@ -25,16 +25,7 @@ export const About = () => {
               Interested in the entire frontend/backend spectrum and working on ambitious projects with positive people.
               </p>
           </div>
-          <div className='textsphere flex flex-col justify-center items-center text-white'>
-            <label>tagcloud</label>
-            <label>tagcloud</label>
-            <label>tagcloud</label>
-            <label>tagcloud</label>
-            <label>tagcloud</label>
-            <label>tagcloud</label>
-            <label>tagcloud</label>
-
-          </div>
+          <LatopModel />
       </div>
     </div>
   )

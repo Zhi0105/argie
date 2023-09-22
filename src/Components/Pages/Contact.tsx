@@ -27,16 +27,19 @@ export const Contact = () => {
   }
 
   return (
-    <div className='contact_main min-h-screen grid grid-cols-2 gap-12 place-items-center px-20'>
-      <div
-        style={{
-          width: "50vw",
-          height: "50vh"
-        }}
-        >
-        <PlanetCanvas />
-      </div>
-      <div className="w-full md:w-96 md:max-w-full mx-auto grid place-items-center mt-[-5%]">
+    <div className='contact_main min-h-screen min-w-screen grid grid-cols-1 place-items-center px-8'>
+      <div 
+        className='contact_container h-full w-full mt-[10%] grid grid-cols-2
+          xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2
+        '
+      > 
+        <div className="w-full h-full flex justify-center items-center">
+          <div className="xs:w-[100vw] xs:h-[50vh] sm:w[100:vw] sm:h-[60vh] w-[60vw] h-[50vh]">
+            <PlanetCanvas />
+          </div>
+        </div>  
+
+        <div className="w-full h-full flex flex-col justify-center items-center">
           <div className="font-bold text-[#08FFD4] text-5xl mb-5">Get in Touch!</div>
           <div className="w-full p-6 sm:rounded-md mx-4 shadow-2xl shadow-[#08FFD4]">
             <form className="contact_form grid grid-cols-1 gap-4 px-8"  onSubmit={handleSubmit((data) => onSubmit(data))}>
@@ -103,11 +106,13 @@ export const Contact = () => {
                 <span className="absolute inset-0 w-full h-full duration-300 delay-300 bg-gray-900 opacity-0 group-hover:opacity-100"></span>
                 <span className="relative transition-colors duration-300 delay-200 group-hover:text-[#FAC334] ease">Submit</span>
               </button>
-            
+    
             </div>
             </form>
-          </div>
+            </div>
+        </div>  
       </div>
-    </div>
+  </div>
+
   )
 }
