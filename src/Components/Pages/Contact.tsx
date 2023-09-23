@@ -1,7 +1,7 @@
 import { Controller, useForm } from "react-hook-form";
 import { TextField } from "@_components/Partials/Forms/Input";
 import { TextAreaField } from "@_components/Partials/Forms/TextArea";
-import { PlanetCanvas } from "@_components/Partials/PlanetCanvas";
+import { PlanetCanvas } from "@_src/Components/Partials/Canvas/PlanetCanvas";
 
 interface contactInterface {
   name: string,

@@ -21,7 +21,8 @@
       "@_providers/*": ["./src/Providers/*"],
       "@_routes/*": ["./src/Routes/*"],
       "@_templates/*": ["./src/Template/*"],
-      "@_utils/*": ["./src/utils/*"]
+      "@_utils/*": ["./src/utils/*"],
+      "@_types/*": ["./src/types/*"]
       // alias path 
     },
 

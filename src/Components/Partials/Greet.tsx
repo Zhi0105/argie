@@ -16,7 +16,7 @@ export const Greet = () => {
     <>
       {/* DESKTOP */}
       <div 
-        className='greet_main text-white flex flex-col justify-center pl-16
+        className='greet_main text-white flex flex-col justify-center
         xs:hidden sm:hidden md:hidden lg:flex xl:flex
         lg:h-full lg:w-full xl:h-full xl:w-full
 
@@ -104,11 +104,6 @@ export const Greet = () => {
 
         <motion.div 
             className="btn_abouts flex gap-6 mt-3"
-            animate={{ 
-              y: [ 100, 70, 50, 0 ],
-              opacity: [0, 0.1, 0.5, 1] 
-            }}
-            transition={{ type: "tween", delay: 6, duration: 1, ease: "easeInOut" }}
           >
           <a 
           href={cv}

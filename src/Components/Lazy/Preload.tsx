@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { SyncLoader } from 'react-spinners'
-import { LoadCanvas } from '@_components/Partials/LoadCanvas'
+import { LoadCanvas } from '@_src/Components/Partials/Canvas/LoadCanvas'
 
 interface PreLoadInterface {
   loading: boolean

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { Preload } from '@_src/Components/Lazy/Preload'
 import { Particle } from '@_src/Components/Particles/Particle'
 import { Navbar } from '@_src/Navigation/Navbar'
+import { CursorTrail } from '@_src/Components/Particles/Cursortrail'
 import _ from 'lodash'
 
 export const PageTemplate = ({ children }: { children: React.ReactNode }) => {
@@ -20,20 +21,22 @@ useEffect(() => { // HANDLE PRELOADER WHEN ROUTE CHANGE
   }
 }, [route, setLoading])
 
-if(loading){
+if(loading){ 
   return (
    <Particle>
-     <Preload loading={loading}/>
+      <CursorTrail />
+      <Preload loading={loading}/>
    </Particle>
   )
 }
 
   return (
     <motion.div className='template_main shadow-current'>
+      <CursorTrail />
       {route.pathname !== '/' && <Navbar /> }
-      <div className='mb-28'>
-        {children}
-      </div>
+        <div className='mb-28'>
+          {children}
+        </div>
     </motion.div>
   )
 }
