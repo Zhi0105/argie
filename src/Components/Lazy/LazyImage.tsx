@@ -28,11 +28,54 @@ import fspoticoprod from '@_assets/project/potico_cod.webp'
 import fspoticologo from '@_assets/project/potico_logo.webp'
 import fsweb from '@_assets/project/fsweb.webp'
 import fsattendace from '@_assets/project/fs_attendance.webp'
-import fsattendanceboard from '@_assets/project//fs_attendance_dashboard.webp'
+import fsattendanceboard from '@_assets/project/fs_attendance_dashboard.webp'
+
+import ise from '@_assets/ise.webp'
+import e from '@_assets/e.webp'
+import fs from '@_assets/fs.webp'
 
 interface imageInterface {
   width?: number,
   height?: number
+}
+
+
+
+export const ISE: FC<imageInterface> = ({ width, height }) => {
+  return (
+    <div>
+      <LazyLoadImage 
+        src={ise}
+        alt="ise"
+        height={height}
+        width={width}
+      />
+    </div>
+  )
+}
+export const E: FC<imageInterface> = ({ width, height }) => {
+  return (
+    <div>
+      <LazyLoadImage 
+        src={e}
+        alt="e"
+        height={height}
+        width={width}
+      />
+    </div>
+  )
+}
+export const FS: FC<imageInterface> = ({ width, height }) => {
+  return (
+    <div>
+      <LazyLoadImage 
+        src={fs}
+        alt="fs"
+        height={height}
+        width={width}
+      />
+    </div>
+  )
 }
 
 export const Initial: FC<imageInterface> = ({ width, height }) => {

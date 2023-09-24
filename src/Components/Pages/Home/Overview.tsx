@@ -1,7 +1,6 @@
 import{ FC, useEffect, useState } from 'react'
 import { Tilt } from 'react-tilt'
-import { serviceInterface } from '@_src/types/interface'
-import { serviceCardInterface } from '@_src/types/interface'
+import { serviceInterface, serviceCardInterface } from '@_src/types/interface'
 import { motion } from 'framer-motion'
 import { WebCanvas } from '@_src/Components/Partials/Canvas/WebCanvas'
 import { ReactCanvas } from '@_src/Components/Partials/Canvas/ReactCanvas'
