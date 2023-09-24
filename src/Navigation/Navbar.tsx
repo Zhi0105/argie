@@ -5,7 +5,7 @@ import { Initial } from "@_src/Components/Lazy/LazyImage";
 import { Links } from "./Links";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser, faHammer, faBriefcase, faPhoneVolume } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faHammer, faBriefcase, faPhoneVolume, faHouseChimney } from '@fortawesome/free-solid-svg-icons'
 import _ from "lodash";
 
 interface NavIconInterface {
@@ -77,6 +77,16 @@ return (
       {/* MOBILE */}
         <div className='mobile_navbar_wrapper w-screen xs:flex sm:flex md:flex lg:hidden xl:hidden bg-gray-300 text-black fixed bottom-0 z-10'>
             <div className='mobile_navbar_items w-full text-sm flex justify-evenly py-4 px-4'>
+
+                <Link 
+                    className={`font-bold flex flex-col text-center capitalize ${activeRoute === '/' && 'text-[#d97706]'}`}
+                    onClick={() => setActiveRoute('/')}
+                    to={"/"}
+                >
+                    <FontAwesomeIcon icon={faHouseChimney} fontSize={18} />
+                    <label>Home</label>
+                </Link>
+
                 {Links.map((link, index) => {
                     return (
                     <Link

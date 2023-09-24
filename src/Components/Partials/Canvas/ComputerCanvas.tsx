@@ -34,7 +34,7 @@ export const ComputerCanvas = () => {
       if(screenWidth < 399) {
         return 1.6
       }
-       return 0.9
+      return 0.9
     }
 
   

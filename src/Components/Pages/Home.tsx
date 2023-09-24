@@ -1,14 +1,16 @@
 import { Greet } from '@_components/Partials/Greet'
 import { ComputerCanvas } from '@_src/Components/Partials/Canvas/ComputerCanvas'
 import { Overview } from './Home/Overview'
+import { Experiences } from './Home/Experiences'
 
 export const Home = () => {
   
   return (
     <div className='index_main min-h-screen w-screen grid grid-cols-1'>
       <div 
-        className='index_container min-h-screen w-screen grid grid-cols-2 px-16
+        className='index_container min-h-screen w-screen grid grid-cols-2 
           xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2
+          sm:px-16 lg:px-16 xl:px-16
         '
       > 
 
@@ -23,6 +25,7 @@ export const Home = () => {
       </div>
       
       <Overview />
+      <Experiences />
     </div>
   )
 }
