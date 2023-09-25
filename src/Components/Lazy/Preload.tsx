@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { SyncLoader } from 'react-spinners'
-import { LoadCanvas } from '@_src/Components/Partials/Canvas/LoadCanvas'
-
+import load from '@_assets/loader.json'
+import Lottie from 'lottie-react'
 interface PreLoadInterface {
   loading: boolean
 }
@@ -9,12 +9,7 @@ interface PreLoadInterface {
 export const Preload: FC<PreLoadInterface> = ({ loading }) => {
   return (
     <div className='min-h-screen flex flex-col justify-center items-center'>
-      <div style={{ 
-          width: "50vw",
-          height: "50vh",
-      }}>
-        <LoadCanvas />
-      </div>
+      <Lottie animationData={load} />
       <div className='text-[#08FFD4] text-xl flex gap-2'>
         <span>Loading</span>
         <SyncLoader color={"#08FFD4"} loading={loading} size={20} />
