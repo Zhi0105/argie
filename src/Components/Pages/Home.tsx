@@ -2,6 +2,7 @@ import { Greet } from '@_components/Partials/Greet'
 import { ComputerCanvas } from '@_src/Components/Partials/Canvas/ComputerCanvas'
 import { Overview } from './Home/Overview'
 import { Experiences } from './Home/Experiences'
+import { Tech } from './Home/Tech'
 
 export const Home = () => {
   
@@ -26,6 +27,7 @@ export const Home = () => {
       
       <Overview />
       <Experiences />
+      <Tech />
     </div>
   )
 }

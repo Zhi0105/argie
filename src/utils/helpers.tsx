@@ -1,6 +1,15 @@
-import { experienceInterface } from "@_src/types/interface";
+import { experienceInterface, technologyInterface } from "@_src/types/interface";
 import { ISE, FS, E } from '@_components/Lazy/LazyImage'
-
+import html from '@_assets/skills/html.webp'
+import css from '@_assets/skills/css.webp'
+import js from '@_assets/skills/js.webp'
+import react from '@_assets/skills/react-js.webp'
+import next from '@_assets/skills/next js.webp'
+import git from '@_assets/skills/git.webp'
+import wp from '@_assets/skills/wordpress.webp'
+import mysql from '@_assets/skills/mysql.webp'
+import reactnative from '@_assets/skills/react-native.webp'
+import typescript from '@_assets/skills/typescript.webp'
 
 export const experiences: experienceInterface[] = [
   {
@@ -39,4 +48,17 @@ export const experiences: experienceInterface[] = [
       "Next Js Developer",
     ]
   },
+]
+
+export const technologies: technologyInterface[] = [
+  { name: "html", icon: html },
+  { name: "css", icon: css },
+  { name: "javascript", icon: js },
+  { name: "react", icon: react },
+  { name: "next", icon: next },
+  { name: "git", icon: git },
+  { name: "wordpress", icon: wp },
+  { name: "mysql", icon: mysql },
+  { name: "reactnative", icon: reactnative },
+  { name: "typescript", icon: typescript }
 ]

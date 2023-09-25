@@ -21,3 +21,8 @@ export interface experienceCardInterface {
   experience: experienceInterface,
   key?: number
 }
+
+export interface technologyInterface {
+  name: string,
+  icon?: string
+}
