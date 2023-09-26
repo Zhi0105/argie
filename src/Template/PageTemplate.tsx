@@ -5,6 +5,7 @@ import { Preload } from '@_src/Components/Lazy/Preload'
 import { Particle } from '@_src/Components/Particles/Particle'
 import { Navbar } from '@_src/Navigation/Navbar'
 import { CursorTrail } from '@_src/Components/Particles/Cursortrail'
+import { ScrollToTop } from '@_src/Navigation/ScrollToTop'
 import _ from 'lodash'
 
 export const PageTemplate = ({ children }: { children: React.ReactNode }) => {
@@ -33,6 +34,7 @@ if(loading){
   return (
     <motion.div className='template_main shadow-current'>
       <CursorTrail />
+      <ScrollToTop />
       {route.pathname !== '/' && <Navbar /> }
         <div className='mb-28'>
           {children}
