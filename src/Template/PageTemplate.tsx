@@ -17,7 +17,7 @@ useEffect(() => { // HANDLE PRELOADER WHEN ROUTE CHANGE
     setLoading(true)
     _.delay(() => {
       setLoading(false)
-    }, 2500)
+    }, 1000)
   }
 }, [route, setLoading])
 
