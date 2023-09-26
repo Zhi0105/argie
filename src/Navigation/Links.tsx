@@ -5,7 +5,6 @@ title: string
 
 export const Links: LinkInterface[] = [ 
   { id: 1, title: "about" },
-  { id: 1, title: "skill" },
-  { id: 1, title: "work" },
-  { id: 1, title: "contact" },
+  { id: 2, title: "skill" },
+  { id: 3, title: "contact" },
 ]

@@ -5,7 +5,7 @@ import { Initial } from "@_src/Components/Lazy/LazyImage";
 import { Links } from "./Links";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser, faHammer, faBriefcase, faPhoneVolume, faHouseChimney } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faHammer, faPhoneVolume, faHouseChimney } from '@fortawesome/free-solid-svg-icons'
 import _ from "lodash";
 
 interface NavIconInterface {
@@ -33,11 +33,6 @@ const NavIcons: FC<NavIconInterface> = ({ name }) => {
   if(name === 'skill'){
       return(
           <FontAwesomeIcon icon={faHammer} fontSize={18} />
-      )
-  }
-  if(name === 'work'){
-      return(
-          <FontAwesomeIcon icon={faBriefcase} fontSize={18} />
       )
   }
   if(name === 'contact'){

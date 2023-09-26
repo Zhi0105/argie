@@ -7,7 +7,6 @@ import { useRouteStore } from '@_src/assets/Store/RouteStore'
 import { HomeScreen } from '@_src/Components/Screens/HomeScreen'
 import { AboutScreen } from '@_src/Components/Screens/AboutScreen'
 import { SkillScreen } from '@_src/Components/Screens/SkillScreen'
-import { WorkScreen } from '@_src/Components/Screens/WorkScreen'
 import { ContactScreen } from '@_src/Components/Screens/ContactScreen'
 
 
@@ -28,7 +27,6 @@ useEffect(() => {
       <Route path="/" element={<HomeScreen />} />
       <Route path="/about" element={<AboutScreen />} />
       <Route path="/skill" element={<SkillScreen />} />
-      <Route path="/work" element={<WorkScreen />} />
       <Route path="/contact" element={<ContactScreen />} />
     </Routes>
   </AnimatePresence>
