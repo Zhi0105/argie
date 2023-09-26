@@ -11,6 +11,12 @@ import mysql from '@_assets/skills/mysql.webp'
 import reactnative from '@_assets/skills/react-native.webp'
 import typescript from '@_assets/skills/typescript.webp'
 
+import firebase from '@_assets/skills/firebase.webp'
+import laragon from '@_assets/skills/Laragon.webp'
+import node from '@_assets/skills/node js.webp'
+import laravel from '@_assets/skills/laravel.webp'
+import php from '@_assets/skills/php.webp'
+
 export const experiences: experienceInterface[] = [
   {
     logo: <ISE width={50} height={50} />,
@@ -61,4 +67,13 @@ export const technologies: technologyInterface[] = [
   { name: "mysql", icon: mysql },
   { name: "reactnative", icon: reactnative },
   { name: "typescript", icon: typescript }
+]
+
+export const skillTechnologies: technologyInterface[] = [
+  ...technologies,
+  { name: "firebase", icon: firebase },
+  { name: "laragon", icon: laragon },
+  { name: "node", icon: node },
+  { name: "laravel", icon: laravel },
+  { name: "php", icon: php },
 ]
