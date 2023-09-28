@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { IteratedText } from './IteratedText'
 import { Initial } from '../Lazy/LazyImage'
-import { MdMail } from 'react-icons/md'
+// import { MdMail } from 'react-icons/md'
 import { FaFacebook, FaLinkedin, FaGithub } from 'react-icons/fa'
 import Typical from 'react-typical'
-import cv from '@_assets/argie.pdf'
+// import cv from '@_assets/argie.pdf'
 import { useRouteStore } from '@_src/assets/Store/RouteStore'
 
 export const Greet = () => {
@@ -98,14 +98,14 @@ export const Greet = () => {
         <div className='links flex flex-row gap-4 mt-2'>
           <Link to="https://www.linkedin.com/in/argie-barcena/" target='_blank'><FaLinkedin size={28} color='#08FFD4'/></Link>
           <Link to="https://www.facebook.com/aia.argie" target='_blank'><FaFacebook size={28} color='#08FFD4'/></Link>
-          <Link to="#"><MdMail size={28} color='#08FFD4'/></Link>
+          {/* <Link to="#"><MdMail size={28} color='#08FFD4'/></Link> */}
           <Link to="https://github.com/Zhi0105" target='_blank'><FaGithub size={28} color='#08FFD4'/></Link>
         </div>
 
         <motion.div 
             className="btn_abouts flex gap-6 mt-3"
           >
-          <a 
+          {/* <a 
           href={cv}
           className="relative inline-flex items-center justify-center p-4 px-8 py-3 overflow-hidden font-medium text-[#08FFD4] transition duration-300 ease-out border-2 border-[#08FFD4] rounded-full shadow-md group"
           >
@@ -114,7 +114,7 @@ export const Greet = () => {
             </span>
             <span className="absolute flex items-center justify-center w-full h-full text-white transition-all duration-300 transform group-hover:translate-x-full ease">Download CV</span>
             <span className="relative invisible">Download CV</span>
-          </a>
+          </a> */}
           <Link 
           to="/about"
           onClick={() => setActiveRoute('about')}
@@ -155,14 +155,14 @@ export const Greet = () => {
         <div className='links flex flex-row gap-4 mt-2'>
           <Link to="https://www.linkedin.com/in/argie-barcena/" target='_blank'><FaLinkedin size={20} color='#08FFD4'/></Link>
           <Link to="https://www.facebook.com/aia.argie" target='_blank'><FaFacebook size={20} color='#08FFD4'/></Link>
-          <Link to="#"><MdMail size={20} color='#08FFD4'/></Link>
+          {/* <Link to="#"><MdMail size={20} color='#08FFD4'/></Link> */}
           <Link to="https://github.com/Zhi0105" target='_blank'><FaGithub size={20} color='#08FFD4'/></Link>
         </div>
 
         <div 
           className="btn_abouts flex gap-6 mt-3"
         >
-          <a 
+          {/* <a 
           href={cv}
           className="relative inline-flex items-center justify-center p-4 overflow-hidden font-medium text-[#08FFD4] transition duration-300 ease-out border-2 border-[#08FFD4] rounded-full shadow-md group"
           >
@@ -171,7 +171,7 @@ export const Greet = () => {
             </span>
             <span className="absolute flex items-center justify-center w-full h-full text-white transition-all duration-300 transform group-hover:translate-x-full ease">Download CV</span>
             <span className="relative invisible">Download CV</span>
-          </a>
+          </a> */}
           <Link 
           to="/about"
           onClick={() => setActiveRoute('about')}
