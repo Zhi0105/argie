@@ -22,11 +22,11 @@ export const Greet = () => {
 
       '>
         <motion.div
-          animate={{ 
-            y: [ 100, 70, 50, 0 ],
-            opacity: [0, 0.1, 0.5, 1]
-          }}
-          transition={{ type: "spring", stiffness: 400, delay: 2, duration: 1, ease: "easeInOut" }}
+          // animate={{ 
+          //   y: [ 100, 70, 50, 0 ],
+          //   opacity: [0, 0.1, 0.5, 1]
+          // }}
+          // transition={{ type: "spring", stiffness: 400, delay: 2, duration: 1, ease: "easeInOut" }}
         >
           <IteratedText 
               text="Hello," 
@@ -36,12 +36,12 @@ export const Greet = () => {
 
         <div className='greet_name flex flex-row gap-2 font-bold text-6xl lg:text-5xl xl:text-6xl'>
           <motion.div
-            animate={{ 
-              x: [-100, 0],
-              opacity: [0, 0.1, 0.5, 1],
-              rotate: [0, 360],
-            }}
-            transition={{ type: "spring", stiffness: 400, delay: 2.5, duration: 1, ease: "easeInOut" }}
+            // animate={{ 
+            //   x: [-100, 0],
+            //   opacity: [0, 0.1, 0.5, 1],
+            //   rotate: [0, 360],
+            // }}
+            // transition={{ type: "spring", stiffness: 400, delay: 2.5, duration: 1, ease: "easeInOut" }}
           >
             <IteratedText 
               text="I'm"
@@ -52,12 +52,12 @@ export const Greet = () => {
           <div className='flex'>
             <Initial width={70} height={70} />
             <motion.div
-              animate={{ 
-                x: [-100, 0],
-                opacity: [0, 0.1, 0.5, 1],
-                rotate: [0, 360],
-              }}
-              transition={{ type: "spring", stiffness: 400, delay: 2.8, duration: 1, ease: "easeInOut" }}
+              // animate={{ 
+              //   x: [-100, 0],
+              //   opacity: [0, 0.1, 0.5, 1],
+              //   rotate: [0, 360],
+              // }}
+              // transition={{ type: "spring", stiffness: 400, delay: 2.8, duration: 1, ease: "easeInOut" }}
             >
               <IteratedText 
                 text="rgie,"
@@ -69,18 +69,18 @@ export const Greet = () => {
 
         <div className='greet_info flex flex-row gap-2 font-bold text-4xl lg:text-3xl xl:text-4xl'>
           <motion.div
-            animate={{ 
-              y: [ -100, -70, -50, 0 ],
-              opacity: [0, 0.1, 0.5, 1]
-            }}
-            transition={{ type: "spring", stiffness: 300, delay: 2.9, duration: 1, ease: "easeInOut" }}
+            // animate={{ 
+            //   y: [ -100, -70, -50, 0 ],
+            //   opacity: [0, 0.1, 0.5, 1]
+            // }}
+            // transition={{ type: "spring", stiffness: 300, delay: 2.9, duration: 1, ease: "easeInOut" }}
           >
             <IteratedText text="And I'm a" styles="flex flex-row" />
           </motion.div>
 
           <motion.div
-            animate={{ opacity: [0, 0.3, 0.5, 0.7, 1] }}
-            transition={{ type: "tween", duration: 2, delay: 3, ease: "easeInOut" }}
+            // animate={{ opacity: [0, 0.3, 0.5, 0.7, 1] }}
+            // transition={{ type: "tween", duration: 2, delay: 3, ease: "easeInOut" }}
           >
             <IteratedText text="Software Developer"styles="flex flex-row text-[#08FFD4]" />
           </motion.div>

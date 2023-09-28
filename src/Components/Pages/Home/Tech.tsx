@@ -4,7 +4,7 @@ import { BallCanvas } from "@_src/Components/Partials/Canvas/BallCanvas"
 
 export const Tech = () => {
   return (
-    <div className='tech_main min-h-screen w-screen grid grid-cols-1 place-items-center px-16 text-center'>
+    <div className='tech_main min-h-auto w-screen grid grid-cols-1 place-items-center py-32 px-16 text-center'>
       <div className="xs:w-full sm:w-3/4 w-1/2 flex flex-row justify-center flex-wrap gap-2 px-12">
           {technologies.map((technology: technologyInterface) => {
             return (

@@ -4,6 +4,7 @@ import { Overview } from './Home/Overview'
 import { Experiences } from './Home/Experiences'
 import { Tech } from './Home/Tech'
 import { Contact } from './Contact'
+import { Work } from './Home/Work'
 
 export const Home = () => {
   
@@ -29,6 +30,7 @@ export const Home = () => {
       <Overview />
       <Experiences />
       <Tech />
+      <Work />
       <Contact />
     </div>
   )
