@@ -1,6 +1,12 @@
 import { Controller, useForm } from "react-hook-form";
 import { TextField } from "@_components/Partials/Forms/Input";
 import { TextAreaField } from "@_components/Partials/Forms/TextArea";
+import emailjs from '@emailjs/browser'
+
+  // https://dashboard.emailjs.com/admin  user: barcenaargie@gmail.com pass: Zhi@0105
+  // 0xSBZKyqWDyNwUNGV
+  // template_k7i45qx
+  // service_aya6wle
 
 interface contactInterface {
   name: string,
@@ -13,6 +19,7 @@ export const ContactForm = () => {
   const {
     handleSubmit,
     control,
+    setValue
   } = useForm<contactInterface>({
     defaultValues: {
       name: '',
@@ -22,7 +29,27 @@ export const ContactForm = () => {
   });
 
   const onSubmit = (data: contactInterface): void => {
-    console.log(data)
+
+    emailjs.send(
+      'service_aya6wle', 
+      'template_k7i45qx',
+      {
+        from_name: data.name,
+        to_name: 'Argie',
+        from_email: data.email,
+        to_email: 'barcenaargie@gmail.com',
+        message: data.message
+      },
+      '0xSBZKyqWDyNwUNGV'
+    ).then(() => {
+      alert('Thank you. I will get back to you as soon as possible!')
+      setValue("name", '')
+      setValue("email", '')
+      setValue("message", '')
+    }, (error) => {
+      console.log("@CE:", error)
+      alert("Something went wrong.")
+    })
   }
 
   return (
