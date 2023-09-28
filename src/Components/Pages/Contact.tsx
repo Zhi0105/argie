@@ -67,9 +67,12 @@ export const Contact = () => {
         '
       > 
         <div className="w-full h-full flex justify-center items-center">
-          <div className="xs:w-[100vw] xs:h-[50vh] sm:w[100:vw] sm:h-[60vh] w-[60vw] h-[50vh]">
-            <PlanetCanvas />
-          </div>
+        {screenWidth < 800 ? 
+            <Lottie animationData={envelop} /> :
+            <div className="xs:w-[100vw] xs:h-[50vh] sm:w[100:vw] sm:h-[60vh] w-[60vw] h-[50vh]">
+              <PlanetCanvas />
+            </div>
+          }
         </div>
 
         <ContactForm />  

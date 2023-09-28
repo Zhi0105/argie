@@ -12,7 +12,7 @@ export const About = () => {
           <div className='flex flex-col gap-8 justify-center px-4 text-white'>
               <IteratedText 
                 text="Me, Myself & I" 
-                styles="greet_detail text-[#08FFD4] flex flex-row font-bold text-6xl"
+                styles="greet_detail text-[#08FFD4] flex flex-row font-bold xs:text-4xl sm:text-5xl md:text-5xl text-6xl"
               />
               
               <p className='indent-8'>
