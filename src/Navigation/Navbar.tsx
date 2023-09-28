@@ -70,7 +70,7 @@ return (
     </div>  
     {/* DESKTOP */}
       {/* MOBILE */}
-        <div className='mobile_navbar_wrapper w-screen xs:flex sm:flex md:flex lg:hidden xl:hidden bg-gray-300 text-black fixed bottom-0 z-10'>
+        <div className='mobile_navbar_wrapper w-screen xs:flex sm:flex md:flex lg:hidden xl:hidden bg-gray-300 text-black fixed bottom-0 z-30'>
             <div className='mobile_navbar_items w-full text-sm flex justify-evenly py-4 px-4'>
 
                 <Link 

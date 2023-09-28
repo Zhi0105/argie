@@ -9,7 +9,7 @@ import 'swiper/css/navigation'
 
 import '@_assets/css/swipe.css'
 
-import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules'
+import { EffectCoverflow, Pagination } from 'swiper/modules'
 
 export const Work = () => {
   return (
@@ -32,8 +32,7 @@ export const Work = () => {
             slideShadows: true,
           }}
           pagination={true}
-          navigation={true}
-          modules={[EffectCoverflow, Pagination, Navigation]}
+          modules={[EffectCoverflow, Pagination]}
           className='mySwiper'
         >
           {work.map((item: any) => {

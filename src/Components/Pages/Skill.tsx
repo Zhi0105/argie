@@ -3,10 +3,24 @@ import { DevSkill } from "@_components/Partials/DevSkill"
 import { skillTechnologies } from "@_src/utils/helpers"
 import { technologyInterface } from "@_src/types/interface"
 import { BallCanvas } from "../Partials/Canvas/BallCanvas"
+import { useEffect, useState } from "react"
+
 import Lottie from 'lottie-react'
 import dev from '@_assets/dev.json'
 
 export const Skill = () => {
+
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+  const updateScreenWidth = () => {
+    setScreenWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', updateScreenWidth);  
+    return () => {
+      window.removeEventListener('resize', updateScreenWidth);
+    };
+  }, []);
   return (
     <div className='skill_main min-h-screen grid grid-cols-1'>
       <div className="grid grid-cols-1 w-full mt-[10%] text-center">
@@ -24,13 +38,15 @@ export const Skill = () => {
               <label className='text-xl font-bold text-[#08FFD4]'>What I do ?</label>
               <Lottie animationData={dev} />
               <div className="w-full flex flex-row justify-center flex-wrap gap-2 px-12">
-              {skillTechnologies.map((technology: technologyInterface) => {
+              {screenWidth > 1100 &&
+              skillTechnologies.map((technology: technologyInterface) => {
                 return (
                     <div className="w-20 h-20" key={technology.name}>
                       <BallCanvas icon={technology.icon}/>
                     </div>
                 ) 
-              })}
+              })
+              }
               </div>
             </div>
           </div>

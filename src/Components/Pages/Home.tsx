@@ -5,9 +5,22 @@ import { Experiences } from './Home/Experiences'
 import { Tech } from './Home/Tech'
 import { Contact } from './Contact'
 import { Work } from './Home/Work'
+import { useEffect, useState } from "react"
+import Lottie from 'lottie-react'
+import tech from '@_assets/tech.json'
 
 export const Home = () => {
-  
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+  const updateScreenWidth = () => {
+    setScreenWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', updateScreenWidth);  
+    return () => {
+      window.removeEventListener('resize', updateScreenWidth);
+    };
+  }, []);
   return (
     <div className='index_main min-h-screen w-screen grid grid-cols-1'>
       <div 
@@ -22,14 +35,20 @@ export const Home = () => {
           className='computer_model_container text-white
           xs:h-3/4 sm:h-3/4 md:h-3/4 lg:h-full lg:w-full xl:h-full xl:w-full
         '>
+        {screenWidth < 800 ? (
+          <Lottie animationData={tech}/>
+        ) : (
           <ComputerCanvas />
+        )
+
+        }
         </div>
     
       </div>
       
       <Overview />
       <Experiences />
-      <Tech />
+      {screenWidth > 800 && <Tech />}
       <Work />
       <Contact />
     </div>

@@ -2,6 +2,9 @@ import { PlanetCanvas } from "@_src/Components/Partials/Canvas/PlanetCanvas";
 import { ContactForm } from "../Partials/Forms/ContactForm";
 import { useRouteStore } from '@_src/assets/Store/RouteStore'
 import { motion } from 'framer-motion'
+import { useEffect, useState } from "react"
+import Lottie from "lottie-react";
+import envelop from '@_assets/envelop.json'
 
 
 export const Contact = () => {
@@ -9,6 +12,17 @@ export const Contact = () => {
     route: state.route,
   }))
 
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+  const updateScreenWidth = () => {
+    setScreenWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', updateScreenWidth);  
+    return () => {
+      window.removeEventListener('resize', updateScreenWidth);
+    };
+  }, []);
 
   if(route.pathname === '/'){
     return (
@@ -24,9 +38,13 @@ export const Contact = () => {
           transition={{ type: "spring", stiffness: 400, duration: 0.1, ease: "easeInOut" }}
 
           className="w-full h-full flex justify-center items-center">
-          <div className="xs:w-[100vw] xs:h-[50vh] sm:w[100:vw] sm:h-[60vh] w-[60vw] h-[50vh]">
-            <PlanetCanvas />
-          </div>
+          {screenWidth < 800 ? 
+            <Lottie animationData={envelop}/> :
+            <div className="w-[70vw] h-[60vh]">
+              <PlanetCanvas />
+            </div>
+          }
+          
         </motion.div>
 
         <motion.div
