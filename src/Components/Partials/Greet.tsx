@@ -134,7 +134,7 @@ export const Greet = () => {
         xs:flex sm:flex md:flex lg:hidden xl:hidden
       '>
 
-        <label className='font-bold text-5xl lg:text-4xl xl:text-5xl'>
+        <label className='font-bold text-5xl lg:text-4xl xl:text-5xl pt-10'>
             Hello,
         </label>
         
