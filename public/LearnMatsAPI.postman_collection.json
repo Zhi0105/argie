@@ -1,0 +1,1799 @@
+{
+	"info": {
+		"_postman_id": "2d115eb7-95bf-4f63-9569-a7f0671e5d87",
+		"name": "LearnMats API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17147092"
+	},
+	"item": [
+		{
+			"name": "Classlevel",
+			"item": [
+				{
+					"name": "getClassLevels",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJzYW1wbGVAZW1haWwuY29tIiwiaWF0IjoxNzA4NjE0MDg3LCJleHAiOjE3MDg3MDA0ODd9.4REMtslbiDLVSSGsup9CgV03qPIeNxw8bmUVD5bk-J8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/classlevel/all",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"classlevel",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getClassLevelById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJzYW1wbGVAZW1haWwuY29tIiwiaWF0IjoxNzA4NjE0MDg3LCJleHAiOjE3MDg3MDA0ODd9.4REMtslbiDLVSSGsup9CgV03qPIeNxw8bmUVD5bk-J8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/classlevel/3",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"classlevel",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createClassLevel",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsIm5hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwiaWF0IjoxNzExNzg5NjgyLCJleHAiOjE3MTE4NzYwODJ9.qkk5JxfvVvwEh1Ungmx7F_xFKHDYd6ZkaVwMENYvaKU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"grade 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/classlevel/create",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"classlevel",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateClassLevel",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJzYW1wbGVAZW1haWwuY29tIiwiaWF0IjoxNzA4NDQ5MjAwLCJleHAiOjE3MDg1MzU2MDB9.M5ZWSkxbcIBQkWhKl0vEwXsHrf9-m5Vsm3hjvWhH-XM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test update from class level\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/classlevel/1",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"classlevel",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteClassLevel",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJzYW1wbGVAZW1haWwuY29tIiwiaWF0IjoxNzA4NDQ5MjAwLCJleHAiOjE3MDg1MzU2MDB9.M5ZWSkxbcIBQkWhKl0vEwXsHrf9-m5Vsm3hjvWhH-XM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/classlevel/1",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"classlevel",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Material",
+			"item": [
+				{
+					"name": "getMaterials",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJzYW1wbGVAZW1haWwuY29tIiwiaWF0IjoxNzA4NTg0MDgzLCJleHAiOjE3MDg2NzA0ODN9.kLVzlc5JW6YctMtDOjGjZMRqmHMc3Av4hoCBN8EXDbs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "// {\r\n//     \"classlevel_id\": 3\r\n// }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/material/get-materials",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"material",
+								"get-materials"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMaterialsById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJzYW1wbGVAZW1haWwuY29tIiwiaWF0IjoxNzA4NTg0MDgzLCJleHAiOjE3MDg2NzA0ODN9.kLVzlc5JW6YctMtDOjGjZMRqmHMc3Av4hoCBN8EXDbs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/material/3",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"material",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createMaterial",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJzYW1wbGVAZW1haWwuY29tIiwiaWF0IjoxNzA4NTg0MDgzLCJleHAiOjE3MDg2NzA0ODN9.kLVzlc5JW6YctMtDOjGjZMRqmHMc3Av4hoCBN8EXDbs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"classlevel_id\": 3,\r\n \"name\": \"sample\",\r\n \"material_icon\": \"test\", \r\n \"material_description\": \"test\",\r\n \"material_description_image\": \"test\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/material/create",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"material",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateMaterial",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJzYW1wbGVAZW1haWwuY29tIiwiaWF0IjoxNzA4NTg0MDgzLCJleHAiOjE3MDg2NzA0ODN9.kLVzlc5JW6YctMtDOjGjZMRqmHMc3Av4hoCBN8EXDbs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"classlevel_id\": 2,\r\n    \"name\": \"test material\",\r\n    \"material_icon\": \"test icon\",\r\n    \"material_description\": \"test matdesc\",\r\n    \"material_description_image\": \"test matdescimg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/material/1",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"material",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteMaterial",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJzYW1wbGVAZW1haWwuY29tIiwiaWF0IjoxNzA4NTg0MDgzLCJleHAiOjE3MDg2NzA0ODN9.kLVzlc5JW6YctMtDOjGjZMRqmHMc3Av4hoCBN8EXDbs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/material/2",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"material",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Question",
+			"item": [
+				{
+					"name": "getQuestions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJzYW1wbGVAZW1haWwuY29tIiwiaWF0IjoxNzA4NTg0MDgzLCJleHAiOjE3MDg2NzA0ODN9.kLVzlc5JW6YctMtDOjGjZMRqmHMc3Av4hoCBN8EXDbs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/question/get-questions",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"question",
+								"get-questions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getQuestionsById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJzYW1wbGVAZW1haWwuY29tIiwiaWF0IjoxNzA4NTg0MDgzLCJleHAiOjE3MDg2NzA0ODN9.kLVzlc5JW6YctMtDOjGjZMRqmHMc3Av4hoCBN8EXDbs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/question/2",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"question",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createQuestion",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJzYW1wbGVAZW1haWwuY29tIiwiaWF0IjoxNzA4NTg0MDgzLCJleHAiOjE3MDg2NzA0ODN9.kLVzlc5JW6YctMtDOjGjZMRqmHMc3Av4hoCBN8EXDbs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "// {\r\n//     \"classlevel_id\": 3,\r\n//     \"material_id\": 3,\r\n//     \"name\": \"test question\"\r\n// }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/question/create",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"question",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateQuestion",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJzYW1wbGVAZW1haWwuY29tIiwiaWF0IjoxNzA4NTg0MDgzLCJleHAiOjE3MDg2NzA0ODN9.kLVzlc5JW6YctMtDOjGjZMRqmHMc3Av4hoCBN8EXDbs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"material_id\": 1,\r\n    \"classlevel_id\": 2,\r\n    \"name\": \"sample update question\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/question/1",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"question",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteQuestion",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJzYW1wbGVAZW1haWwuY29tIiwiaWF0IjoxNzA4NTg0MDgzLCJleHAiOjE3MDg2NzA0ODN9.kLVzlc5JW6YctMtDOjGjZMRqmHMc3Av4hoCBN8EXDbs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/question/2",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"question",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Answer",
+			"item": [
+				{
+					"name": "getAnswers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJzYW1wbGVAZW1haWwuY29tIiwiaWF0IjoxNzA4NTg0MDgzLCJleHAiOjE3MDg2NzA0ODN9.kLVzlc5JW6YctMtDOjGjZMRqmHMc3Av4hoCBN8EXDbs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/answer/get-answers",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"answer",
+								"get-answers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAnswersById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJzYW1wbGVAZW1haWwuY29tIiwiaWF0IjoxNzA4NTg0MDgzLCJleHAiOjE3MDg2NzA0ODN9.kLVzlc5JW6YctMtDOjGjZMRqmHMc3Av4hoCBN8EXDbs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/answer/2",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"answer",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createAnswer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJzYW1wbGVAZW1haWwuY29tIiwiaWF0IjoxNzA4NTg0MDgzLCJleHAiOjE3MDg2NzA0ODN9.kLVzlc5JW6YctMtDOjGjZMRqmHMc3Av4hoCBN8EXDbs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question_id\": 4,\r\n    \"name\": \"sample answer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/answer/create",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"answer",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAnswer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJzYW1wbGVAZW1haWwuY29tIiwiaWF0IjoxNzA4NTg0MDgzLCJleHAiOjE3MDg2NzA0ODN9.kLVzlc5JW6YctMtDOjGjZMRqmHMc3Av4hoCBN8EXDbs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question_id\": 1,\r\n    \"name\": \"test update answer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/answer/1",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"answer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAnswer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJzYW1wbGVAZW1haWwuY29tIiwiaWF0IjoxNzA4NTg0MDgzLCJleHAiOjE3MDg2NzA0ODN9.kLVzlc5JW6YctMtDOjGjZMRqmHMc3Av4hoCBN8EXDbs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/answer/2",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"answer",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Result",
+			"item": [
+				{
+					"name": "getResults",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJzYW1wbGVAZW1haWwuY29tIiwiaWF0IjoxNzA4NTg0MDgzLCJleHAiOjE3MDg2NzA0ODN9.kLVzlc5JW6YctMtDOjGjZMRqmHMc3Av4hoCBN8EXDbs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/result/get-results",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"result",
+								"get-results"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getResultsById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJzYW1wbGVAZW1haWwuY29tIiwiaWF0IjoxNzA4NTg0MDgzLCJleHAiOjE3MDg2NzA0ODN9.kLVzlc5JW6YctMtDOjGjZMRqmHMc3Av4hoCBN8EXDbs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/result/3",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"result",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createResult",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJzYW1wbGVAZW1haWwuY29tIiwiaWF0IjoxNzA4NTg0MDgzLCJleHAiOjE3MDg2NzA0ODN9.kLVzlc5JW6YctMtDOjGjZMRqmHMc3Av4hoCBN8EXDbs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"material_id\": 1,\r\n    \"classlevel_id\": 3,\r\n    \"score_by_percentage\": 100,\r\n    \"total_correct_answer\": 100,\r\n    \"total_incorrect_answer\": 0,\r\n    \"number_of_question\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/result/create",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"result",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateResult",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJzYW1wbGVAZW1haWwuY29tIiwiaWF0IjoxNzA4NTg0MDgzLCJleHAiOjE3MDg2NzA0ODN9.kLVzlc5JW6YctMtDOjGjZMRqmHMc3Av4hoCBN8EXDbs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"material_id\": 1,\r\n    \"classlevel_id\": 2,\r\n    \"score_by_percentage\": 50.12\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/result/1",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"result",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteResult",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJzYW1wbGVAZW1haWwuY29tIiwiaWF0IjoxNzA4NTg0MDgzLCJleHAiOjE3MDg2NzA0ODN9.kLVzlc5JW6YctMtDOjGjZMRqmHMc3Av4hoCBN8EXDbs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/result/3",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"result",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllResults",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjcsIm5hbWUiOiJ0ZXN0MyIsImVtYWlsIjoidGVzdDNAZW1haWwuY29tIiwiaWF0IjoxNzA5NDQwMzUzLCJleHAiOjE3MDk1MjY3NTN9.IMC0j2jCP2gcOygXU6PiY8Ozy1g2V1r43qQNqpjVSHU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/result/get-all-results",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"result",
+								"get-all-results"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Language",
+			"item": [
+				{
+					"name": "getLanguages",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJzYW1wbGVAZW1haWwuY29tIiwiaWF0IjoxNzA4Njg5MDQ1LCJleHAiOjE3MDg3NzU0NDV9.IIK8OlgZjEFyW2er6sutv_nFpQB_HZcVz5OLknlj4h8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/language/get-languages",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"language",
+								"get-languages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getLanguageById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJzYW1wbGVAZW1haWwuY29tIiwiaWF0IjoxNzA4Njg5MDQ1LCJleHAiOjE3MDg3NzU0NDV9.IIK8OlgZjEFyW2er6sutv_nFpQB_HZcVz5OLknlj4h8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/language/2",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"language",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createLanguage",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJzYW1wbGVAZW1haWwuY29tIiwiaWF0IjoxNzA4Njg5MDQ1LCJleHAiOjE3MDg3NzU0NDV9.IIK8OlgZjEFyW2er6sutv_nFpQB_HZcVz5OLknlj4h8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"lang_code\": \"vn\",\r\n    \"name\": \"vietnam\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/language/create",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"language",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editLanguageById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJzYW1wbGVAZW1haWwuY29tIiwiaWF0IjoxNzA4Njg5MDQ1LCJleHAiOjE3MDg3NzU0NDV9.IIK8OlgZjEFyW2er6sutv_nFpQB_HZcVz5OLknlj4h8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"lang_code\": \"th\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/language/1",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"language",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteLanguageById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJzYW1wbGVAZW1haWwuY29tIiwiaWF0IjoxNzA4Njg5MDQ1LCJleHAiOjE3MDg3NzU0NDV9.IIK8OlgZjEFyW2er6sutv_nFpQB_HZcVz5OLknlj4h8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/language/2",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"language",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Translation",
+			"item": [
+				{
+					"name": "getTranslations",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJzYW1wbGVAZW1haWwuY29tIiwiaWF0IjoxNzA4Njg5MDQ1LCJleHAiOjE3MDg3NzU0NDV9.IIK8OlgZjEFyW2er6sutv_nFpQB_HZcVz5OLknlj4h8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/translation/get-translations",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"translation",
+								"get-translations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getTranslationsById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJzYW1wbGVAZW1haWwuY29tIiwiaWF0IjoxNzA4Njg5MDQ1LCJleHAiOjE3MDg3NzU0NDV9.IIK8OlgZjEFyW2er6sutv_nFpQB_HZcVz5OLknlj4h8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/translation/2",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"translation",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createTranslation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJzYW1wbGVAZW1haWwuY29tIiwiaWF0IjoxNzA4Njg5MDQ1LCJleHAiOjE3MDg3NzU0NDV9.IIK8OlgZjEFyW2er6sutv_nFpQB_HZcVz5OLknlj4h8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"language_id\": 3,\r\n    \"word\": \"example word\",\r\n    \"translation\": \"example\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/translation/create",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"translation",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editTranslationById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJzYW1wbGVAZW1haWwuY29tIiwiaWF0IjoxNzA4Njg5MDQ1LCJleHAiOjE3MDg3NzU0NDV9.IIK8OlgZjEFyW2er6sutv_nFpQB_HZcVz5OLknlj4h8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"language_id\": 1,\r\n    \"word\": \"test word\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/translation/1",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"translation",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteTranslationById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJzYW1wbGVAZW1haWwuY29tIiwiaWF0IjoxNzA4Njg5MDQ1LCJleHAiOjE3MDg3NzU0NDV9.IIK8OlgZjEFyW2er6sutv_nFpQB_HZcVz5OLknlj4h8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/translation/2",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"translation",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "getCategories",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsIm5hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwiaWF0IjoxNzExNzg5NjgyLCJleHAiOjE3MTE4NzYwODJ9.qkk5JxfvVvwEh1Ungmx7F_xFKHDYd6ZkaVwMENYvaKU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/category/get-categories",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"category",
+								"get-categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCateogriesById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsIm5hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwiaWF0IjoxNzExNzg5NjgyLCJleHAiOjE3MTE4NzYwODJ9.qkk5JxfvVvwEh1Ungmx7F_xFKHDYd6ZkaVwMENYvaKU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/category/1",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsIm5hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwiaWF0IjoxNzExNzg5NjgyLCJleHAiOjE3MTE4NzYwODJ9.qkk5JxfvVvwEh1Ungmx7F_xFKHDYd6ZkaVwMENYvaKU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"classlevel_id\": 22,\r\n    \"name\": \"master of math\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/category/create",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"category",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsIm5hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwiaWF0IjoxNzExNzg5NjgyLCJleHAiOjE3MTE4NzYwODJ9.qkk5JxfvVvwEh1Ungmx7F_xFKHDYd6ZkaVwMENYvaKU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"classlevel_id\": 22,\r\n    \"name\": \"master of english\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/category/1",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsIm5hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwiaWF0IjoxNzExNzg5NjgyLCJleHAiOjE3MTE4NzYwODJ9.qkk5JxfvVvwEh1Ungmx7F_xFKHDYd6ZkaVwMENYvaKU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LEARNMAT_URL}}/category/2",
+							"host": [
+								"{{LEARNMAT_URL}}"
+							],
+							"path": [
+								"category",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test@email.com\",\r\n    \"name\": \"test\",\r\n    \"password\": \"test123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{LEARNMAT_URL}}/auth/signup",
+					"host": [
+						"{{LEARNMAT_URL}}"
+					],
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"sample@email.com\",\r\n    \"password\": \"test123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{LEARNMAT_URL}}/auth/signin",
+					"host": [
+						"{{LEARNMAT_URL}}"
+					],
+					"path": [
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUser",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0QGVtYWlsLmNvbSIsImlhdCI6MTcwODQyMTMzNywiZXhwIjoxNzA4NTA3NzM3fQ.Rl5YSuIpvEtxxwwMngiuyr8PQh7MfONc5XEEnHO8icI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{LEARNMAT_URL}}/users/me",
+					"host": [
+						"{{LEARNMAT_URL}}"
+					],
+					"path": [
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsIm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0QGVtYWlsLmNvbSIsImlhdCI6MTcwODQyMTUwNywiZXhwIjoxNzA4NTA3OTA3fQ.sHR89Ls8tIQg1_3LWoCGeguHVdxS-J5YL05SU2KMjbU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "// {\r\n//     \"email\": \"sample@email.com\"\r\n// }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{LEARNMAT_URL}}/users/update",
+					"host": [
+						"{{LEARNMAT_URL}}"
+					],
+					"path": [
+						"users",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllUsers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsIm5hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AZW1haWwuY29tIiwiaWF0IjoxNzA5MjQxMzk5LCJleHAiOjE3MDkzMjc3OTl9.yl9OcY7xTWZ5eX6GQQZ5YNETD3YPLoU9-iSmvDpW6Ew",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{LEARNMAT_URL}}/users/get-users",
+					"host": [
+						"{{LEARNMAT_URL}}"
+					],
+					"path": [
+						"users",
+						"get-users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

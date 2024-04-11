@@ -79,6 +79,44 @@ export const skillTechnologies: technologyInterface[] = [
 ]
 
 export const work: any[] = [
-  { id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 },
+  { 
+    id: 1, 
+    title: "journal-api",
+    description: "Application programming interface and a web service that can integrates user authentication with crud operations of category and task models",
+    codeURL: "https://github.com/Zhi0105/journal-api",
+    liveURL: "https://journal-api-tbpw.onrender.com/",
+    endpoints: "./JournalAPI.postman_collection.json"
+  }, 
+  { 
+    id: 2, 
+    title: "journal-app",
+    description: "Enhanced Todo Application that can perform journalizing and categorizing user tasks",
+    codeURL: "https://github.com/Zhi0105/journal-app",
+    liveURL: "https://filofax.vercel.app/"
+  }, 
+  { id: 3, 
+    title: "learnmaterial-api",
+    description: "Application programming interface and a web service that can integrates user authentication with crud operations of classlevel, category, material, question, answer, language, translation models",
+    codeURL: "https://github.com/Zhi0105/learnmatsapi",
+    liveURL: "https://learnmatsapi.onrender.com/",
+    endpoints: "./LearnMatsAPI.postman_collection.json"
+  }, 
+  
+  { id: 4,
+    title: "learnmaterial-cms",
+    description: "Content Management System as graphical user interface of learnmaterial api intergrations",
+    codeURL: "https://github.com/Zhi0105/learnmatscms",
+    liveURL: "https://learnmatscms.vercel.app/" 
+  }, 
+  
+  { id: 5, 
+    title: "learnmaterial-application",
+    description: 
+      `Mobile application that can perform user authentications, app language translations, user can choose material and answer the following question multiple choice categorized by class level,
+      and lastly, user can view their result based on what material they choosed.
+      `
+    ,
+    codeURL: "https://github.com/Zhi0105/learnmatsapp",
+  },
   { id: 6 }, { id: 7 }, { id: 8 }, { id: 9 }, { id: 10 },
 ]

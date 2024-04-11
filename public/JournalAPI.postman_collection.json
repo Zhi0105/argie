@@ -1,0 +1,406 @@
+{
+	"info": {
+		"_postman_id": "26588443-b1f2-4199-a4bb-97164f4417d0",
+		"name": "Journal API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17147092"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin@email.com\",\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{JOURNAL_URL}}/auth/signup",
+					"host": [
+						"{{JOURNAL_URL}}"
+					],
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test@email.com\",\r\n    \"password\": \"asd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{JOURNAL_URL}}/auth/signin",
+					"host": [
+						"{{JOURNAL_URL}}"
+					],
+					"path": [
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUser",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiQXJnaWUiLCJlbWFpbCI6InRlc3RAZW1haWwuY29tIiwiaWF0IjoxNzA4NDIwNTQ5LCJleHAiOjE3MDg1MDY5NDl9.bk3tJBY599s3oUlYMzENQLxyZghNp0qusyV4-nxSSes",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{JOURNAL_URL}}/users/me",
+					"host": [
+						"{{JOURNAL_URL}}"
+					],
+					"path": [
+						"users",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoic2FtcGxlIiwiZW1haWwiOiJ0ZXN0QGVtYWlsLmNvbSIsImlhdCI6MTY5NzMwNzgwNCwiZXhwIjoxNjk3Mzk0MjA0fQ.R4z0SZ506DvTczWqK_NRsOjxwcBZqZ5TR-RIU2Xi2jo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    // \"email\": \"sample@email.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{JOURNAL_URL}}/users/update",
+					"host": [
+						"{{JOURNAL_URL}}"
+					],
+					"path": [
+						"users",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCategory",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYXJnaWUiLCJlbWFpbCI6InRlc3RAZW1haWwuY29tIiwiaWF0IjoxNjk3NjE4MjQxLCJleHAiOjE2OTc3MDQ2NDF9.WntUpFhmOTGE0iKSprCqECXnXouJ5dgvwY-MJFo_9JI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{JOURNAL_URL}}/category/all",
+					"host": [
+						"{{JOURNAL_URL}}"
+					],
+					"path": [
+						"category",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createCategory",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoidGVzdCIsImVtYWlsIjoidGVzdEBlbWFpbC5jb20iLCJpYXQiOjE2OTcxMjY5NDUsImV4cCI6MTY5NzEyNzg0NX0.KA7UW-VR596WPwoATb9uXxK0lnBmF5Qmeppc_zq3Wjo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"from postman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{JOURNAL_URL}}/category/create",
+					"host": [
+						"{{JOURNAL_URL}}"
+					],
+					"path": [
+						"category",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateCategory",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYXJnaWUiLCJlbWFpbCI6InRlc3RAZW1haWwuY29tIiwiaWF0IjoxNjk3NjE4MjQxLCJleHAiOjE2OTc3MDQ2NDF9.WntUpFhmOTGE0iKSprCqECXnXouJ5dgvwY-MJFo_9JI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"programs\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{JOURNAL_URL}}/category/1",
+					"host": [
+						"{{JOURNAL_URL}}"
+					],
+					"path": [
+						"category",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCategory",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYXJnaWUiLCJlbWFpbCI6InRlc3RAZW1haWwuY29tIiwiaWF0IjoxNjk3NjE4MjQxLCJleHAiOjE2OTc3MDQ2NDF9.WntUpFhmOTGE0iKSprCqECXnXouJ5dgvwY-MJFo_9JI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{JOURNAL_URL}}/category/29",
+					"host": [
+						"{{JOURNAL_URL}}"
+					],
+					"path": [
+						"category",
+						"29"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTask",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoic2FtcGxlIiwiZW1haWwiOiJ0ZXN0QGVtYWlsLmNvbSIsImlhdCI6MTY5Nzk4MzcyNiwiZXhwIjoxNjk4MDcwMTI2fQ.otKNZmkUsoo8tbpLXIgJvA5ZW37WlBFI10HMdiny9p0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{JOURNAL_URL}}/task/all",
+					"host": [
+						"{{JOURNAL_URL}}"
+					],
+					"path": [
+						"task",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createTask",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoic2FtcGxlIiwiZW1haWwiOiJ0ZXN0QGVtYWlsLmNvbSIsImlhdCI6MTY5Nzk3ODE0NCwiZXhwIjoxNjk4MDY0NTQ0fQ.0CiPIobe6AFunHn120uMY5q4ol_J6gtVLUMaViy5C5w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"category_id\": 2,\r\n    \"name\": \"test from postman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{JOURNAL_URL}}/task/create",
+					"host": [
+						"{{JOURNAL_URL}}"
+					],
+					"path": [
+						"task",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateTask",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiYXJnaWUiLCJlbWFpbCI6InRlc3RAZW1haWwuY29tIiwiaWF0IjoxNjk4NTAyMDA5LCJleHAiOjE2OTg1ODg0MDl9.NaKcfyuM4ZqIWxx0sourEiC4EHWuPYRG0CT43XzoW_g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"category_id\": 1,\r\n    \"name\": \"filofax\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{JOURNAL_URL}}/task/1",
+					"host": [
+						"{{JOURNAL_URL}}"
+					],
+					"path": [
+						"task",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
