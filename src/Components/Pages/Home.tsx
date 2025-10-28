@@ -5,50 +5,35 @@ import { Experiences } from './Home/Experiences'
 import { Tech } from './Home/Tech'
 import { Contact } from './Contact'
 import { Work } from './Home/Work'
-import { useEffect, useState } from "react"
 import Lottie from 'lottie-react'
 import tech from '@_assets/tech.json'
+import { useMediaQuery } from '../Hooks/useMediaQuery'
 
 export const Home = () => {
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth)
-  const updateScreenWidth = () => {
-    setScreenWidth(window.innerWidth);
-  };
+  const isSmallScreen = useMediaQuery("(max-width: 640px)")
+  const isMediumScreen = useMediaQuery("(max-width: 1024px)")
 
-  useEffect(() => {
-    window.addEventListener('resize', updateScreenWidth);  
-    return () => {
-      window.removeEventListener('resize', updateScreenWidth);
-    };
-  }, []);
   return (
-    <div className='index_main min-h-screen w-screen grid grid-cols-1'>
-      <div 
-        className='index_container min-h-screen w-screen grid grid-cols-2 
-          xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2
-          sm:px-16 lg:px-16 xl:px-16
-        '
-      > 
-
+    <div className="index_main min-h-screen w-screen flex flex-col">
+      <section 
+        className={`index_container min-h-screen w-full grid
+          ${isMediumScreen ? 'grid-cols-1 px-8' : 'grid-cols-2 px-16'}
+          place-items-center transition-all duration-300`}>
+        
         <Greet />
-        <div 
-          className='computer_model_container text-white
-          xs:h-3/4 sm:h-3/4 md:h-3/4 lg:h-full lg:w-full xl:h-full xl:w-full
-        '>
-        {screenWidth < 800 ? (
-          <Lottie animationData={tech}/>
-        ) : (
-          <ComputerCanvas />
-        )
 
-        }
+        <div className="computer_model_container text-white h-full w-full flex justify-center items-center">
+          {isSmallScreen ? (
+            <Lottie animationData={tech} loop autoplay />
+          ) : (
+            <ComputerCanvas />
+          )}
         </div>
-    
-      </div>
-      
+      </section>
+
       <Overview />
       <Experiences />
-      {screenWidth > 800 && <Tech />}
+      {!isSmallScreen && <Tech />}
       <Work />
       <Contact />
     </div>

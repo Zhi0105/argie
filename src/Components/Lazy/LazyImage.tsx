@@ -68,6 +68,19 @@ export const FS: FC<imageInterface> = ({ width, height }) => {
   )
 }
 
+export const INQ: FC<imageInterface> = ({ width, height }) => {
+  return (
+    <div>
+      <LazyLoadImage 
+        src='https://media.licdn.com/dms/image/v2/C560BAQGGstm4j-fNvg/company-logo_100_100/company-logo_100_100/0/1672425203925/inquirerdotnet_logo?e=1762992000&v=beta&t=CTNlcnXVfnOGOKDOeb0iROk64axdCw5mjDHytnFQ-98'
+        alt="inq"
+        width={width}
+        height={height}
+      />
+    </div>
+  )
+}
+
 export const Initial: FC<imageInterface> = ({ width, height }) => {
   return (
     <div>

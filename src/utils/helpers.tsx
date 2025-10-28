@@ -1,5 +1,5 @@
 import { experienceInterface, technologyInterface } from "@_src/types/interface";
-import { ISE, FS, E } from '@_components/Lazy/LazyImage'
+import { ISE, FS, E, INQ } from '@_components/Lazy/LazyImage'
 import html from '@_assets/skills/html.webp'
 import css from '@_assets/skills/css.webp'
 import js from '@_assets/skills/js.webp'
@@ -46,7 +46,7 @@ export const experiences: experienceInterface[] = [
   {
     logo: <FS width={40} height={40} />,
     company: "Flowerstore.ph",
-    year: "2022 - current",
+    year: "2022 - 2024",
     role: "Software Developer",
     description: [
       "React Native Developer",
@@ -54,6 +54,16 @@ export const experiences: experienceInterface[] = [
       "Next Js Developer",
     ]
   },
+  {
+    logo: <INQ width={30} height={30}/>,
+    company: "Inquirer Interactive Inc.",
+    year: "2024 - current",
+    role: "Software Developer",
+    description: [
+      "Laravel Developer",
+      "React Js Developer",
+    ]
+  }
 ]
 
 export const technologies: technologyInterface[] = [
@@ -118,5 +128,24 @@ export const work: any[] = [
     ,
     codeURL: "https://github.com/Zhi0105/learnmatsapp",
   },
-  { id: 6 }, { id: 7 }, { id: 8 }, { id: 9 }, { id: 10 },
+  { id: 6 ,
+    title: "NUExtend Web Application (React)",
+    description: "A responsive web app for managing community projects and volunteers, featuring QRbased attendance, digital document processing, automated certificates.",
+    codeURL: "https://github.com/Zhi0105/nuextend-web",
+    liveURL: "https://nuextend-web.vercel.app/" 
+
+  }, 
+  { id: 7 ,
+    title: "NUExtend Backend API (Laravel)",
+    description: "Provides the backend logic and database integration for NUExtend, handling authentication,volunteer data, project records.",
+    codeURL: "https://github.com/Zhi0105/nuextend-api",
+    liveURL: "https://nuextend.duckdns.org/api/v1" 
+  }, 
+  { id: 8,
+    title: "NUExtend Mobile Application (React Native)",
+    description: "A mobile version of NUExtend that allows volunteers to register, track participation, scan QR codes for attendance, and skill-based volunteer matching.",
+    codeURL: "https://github.com/Zhi0105/nuextend-app",
+    liveURL: "https://www.mediafire.com/file/uhrbkt7t7hfmwot/nuextend.apk" 
+
+  }, { id: 9 }, { id: 10 },
 ]
