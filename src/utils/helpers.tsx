@@ -146,6 +146,5 @@ export const work: any[] = [
     description: "A mobile version of NUExtend that allows volunteers to register, track participation, scan QR codes for attendance, and skill-based volunteer matching.",
     codeURL: "https://github.com/Zhi0105/nuextend-app",
     liveURL: "https://www.mediafire.com/file/uhrbkt7t7hfmwot/nuextend.apk" 
-
-  }, { id: 9 }, { id: 10 },
+  },
 ]
