@@ -71,8 +71,12 @@ texture.needsUpdate = true
     })
 
     useEffect(() => {
-        animate(textureOpacity, section === 0 ? 1 : 0)
-        animate(glassTextureOpacity, section === 0 ? 0.42 : 0)
+        animate(textureOpacity, section === 0 ? 1 : 0, {
+            duration: 0.8
+        })
+        animate(glassTextureOpacity, section === 0 ? 0.42 : 0, {
+            duration: 0.8
+        })
     }, [section, textureOpacity, glassTextureOpacity])
 
     useFrame(() => {
@@ -351,3 +355,4 @@ texture.needsUpdate = true
 }
 
 useGLTF.preload('/assets/models/scene.gltf')
+useTexture.preload('/assets/textures/baked.jpg')

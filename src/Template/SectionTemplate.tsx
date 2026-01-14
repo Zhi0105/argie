@@ -1,10 +1,11 @@
 import { motion } from "framer-motion"
 
-export const SectionTemplate = ({ children }: { children: React.ReactNode }) => {
+export const SectionTemplate = ({ children, mobileTop }: { children: React.ReactNode, mobileTop?: boolean }) => {
     return (
         <motion.section className={`
             h-screen w-screen p-8 max-w-screen-2xl mx-auto
-            flex flex-col items-start justify-center
+            flex flex-col items-start
+            ${mobileTop ? "justify-start md:justify-center" : "justify-center"}
         `}
             initial={{
                 opacity: 0,

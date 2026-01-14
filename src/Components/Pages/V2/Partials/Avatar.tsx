@@ -11,11 +11,10 @@ import { useControls } from 'leva'
 import * as THREE from "three"
 
 export const Avatar = (props:any) => {
-  const { animation } = props
-  const { headFollow, cursorFollow, wireframe } = useControls({
+  const { animation, wireframe } = props
+  const { headFollow, cursorFollow } = useControls({
     headFollow: false,
     cursorFollow: false,
-    wireframe: false
   })
   const { scene } = useGLTF('/assets/models/avatar.glb')
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])
@@ -82,3 +81,6 @@ export const Avatar = (props:any) => {
 }
 
 useGLTF.preload('/assets/models/avatar.glb')
+useFBX.preload('/animations/falling.fbx')
+useFBX.preload('/animations/standing.fbx')
+useFBX.preload('/animations/typing.fbx')

@@ -43,14 +43,15 @@ export const Skills = () => {
   return (
     <React.Fragment>
       <motion.div
+        className="w-full"
         whileInView={"visible"}
       >
-        <h2 className="text-5xl font-bold text-white">Skills</h2>
+        <h2 className="text-3xl md:text-5xl font-bold text-white">Skills</h2>
         <div className="mt-8 space-y-4">
           {skills.map((skill, index: number) => (
-            <div className="w-64" key={index}>
+            <div className="w-full md:w-64" key={index}>
               <motion.h3 
-                className="text-xl font-bold text-gray-100"
+                className="text-lg md:text-xl font-bold text-gray-100"
                 initial={{
                   opacity: 0
                 }}
@@ -92,12 +93,12 @@ export const Skills = () => {
       <motion.div
         whileInView={"visible"}
       >
-        <h2 className="text-5xl font-bold mt-10 text-white">Languages</h2>
+        <h2 className="text-3xl md:text-5xl font-bold mt-10 text-white">Languages</h2>
         <div className="mt-8 space-y-4">
           {languages.map((lng, index:number) => (
-            <div className="w-64" key={index}>
+            <div className="w-full md:w-64" key={index}>
               <motion.h3 
-                className="text-xl font-bold text-gray-100"
+                className="text-lg md:text-xl font-bold text-gray-100"
                 initial={{
                   opacity: 0
                 }}

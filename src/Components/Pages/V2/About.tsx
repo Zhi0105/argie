@@ -6,7 +6,7 @@ export const About = (props: any) => {
   const { setSection } = props
   return (
     <React.Fragment>
-      <h1 className="text-6xl font-extrabold leading-snug">
+      <h1 className="text-4xl md:text-6xl font-extrabold leading-snug mt-8 md:mt-0">
         Hi, I'm
         <br />
         <span className="bg-white px-1 italic">Argie</span>
@@ -34,7 +34,7 @@ export const About = (props: any) => {
       </motion.p>
       <motion.button
         onClick={() => setSection(3)}
-        className={`bg-indigo-600 text-white py-4 px-8 rounded-lg font-bold text-lg mt-16`}
+        className={`bg-indigo-600 text-white py-4 px-8 rounded-lg font-bold text-lg mt-4 md:mt-16`}
         initial={{
           opacity: 0,
           y: 25

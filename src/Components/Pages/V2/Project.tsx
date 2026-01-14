@@ -21,7 +21,7 @@ export const Project = () => {
         >
           ← Previous
         </button>
-        <h2 className="text-5xl font-bold">Projects</h2>
+        <h2 className="text-3xl md:text-5xl font-bold">Projects</h2>
         <button
           className="hover:text-indigo-600 transition-colors"
           onClick={nextProject}

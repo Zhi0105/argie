@@ -9,7 +9,7 @@ export const Interface = (props: any) => {
     const { setSection } = props
     return (
         <div className="flex flex-col items-center w-screen">
-            <SectionTemplate>
+            <SectionTemplate mobileTop>
                 <About setSection={setSection} />
             </SectionTemplate>
             <SectionTemplate>
