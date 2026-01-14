@@ -4,7 +4,7 @@ import { AnimatePresence } from 'framer-motion'
 import { useRouteStore } from '@_src/assets/Store/RouteStore'
 
 // Screen
-import { HomeScreen } from '@_src/Components/Screens/HomeScreen'
+// import { HomeScreen } from '@_src/Components/Screens/HomeScreen'
 import { AboutScreen } from '@_src/Components/Screens/AboutScreen'
 import { SkillScreen } from '@_src/Components/Screens/SkillScreen'
 import { ContactScreen } from '@_src/Components/Screens/ContactScreen'
@@ -27,12 +27,12 @@ useEffect(() => {
   return (
     <AnimatePresence initial={false}>
     <Routes location={location} key={location.pathname}>
-      <Route path="/" element={<HomeScreen />} />
+      <Route path="/" element={<HomeScreenV2 />} />
       <Route path="/about" element={<AboutScreen />} />
       <Route path="/skill" element={<SkillScreen />} />
       <Route path="/contact" element={<ContactScreen />} />
 
-      <Route path="/v2" element={<HomeScreenV2 />} />
+      {/* <Route path="/v2" element={<HomeScreenV2 />} /> */}
     </Routes>
   </AnimatePresence>
   )
