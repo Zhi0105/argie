@@ -10,6 +10,9 @@ import { SkillScreen } from '@_src/Components/Screens/SkillScreen'
 import { ContactScreen } from '@_src/Components/Screens/ContactScreen'
 
 
+// V2
+import { HomeScreenV2 } from '@_src/Components/Screens/V2/HomeScreen'
+
 export const RouteList = () => {
   const location = useLocation()
   const { setRoute } = useRouteStore((state) => ({
@@ -19,7 +22,7 @@ export const RouteList = () => {
 useEffect(() => {
   setRoute(location)
   console.log(location)
-}, [location])
+}, [location, setRoute])
   
   return (
     <AnimatePresence initial={false}>
@@ -28,6 +31,8 @@ useEffect(() => {
       <Route path="/about" element={<AboutScreen />} />
       <Route path="/skill" element={<SkillScreen />} />
       <Route path="/contact" element={<ContactScreen />} />
+
+      <Route path="/v2" element={<HomeScreenV2 />} />
     </Routes>
   </AnimatePresence>
   )
