@@ -1,14 +1,16 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Suspense, FC } from "react"
 import { Canvas } from "@react-three/fiber"
 import { Decal, Float, OrbitControls, Preload, useTexture } from '@react-three/drei'
 import { CanvasLoader } from "./CanvasLoader"
+import * as THREE from 'three'
 
 interface BallCanvasInterface {
   icon?: any
 }
 
 const Ball:FC<BallCanvasInterface> = ({ icon }) => {
-    const decal = useTexture(icon)
+    const decal = useTexture(icon) as THREE.Texture
   return (
     <Float
       speed={1.75}
@@ -28,7 +30,6 @@ const Ball:FC<BallCanvasInterface> = ({ icon }) => {
         <Decal
           position={[0, 0, 1]}
           rotation={[ 2 * Math.PI, 0, 6.25 ]}
-          flatShading
           map={decal} 
         />
       </mesh>
