@@ -177,7 +177,7 @@ export const Home = (props:any) => {
                 <group 
                     ref={characterContainerAboutRef}
                     name="CharacterSpot" 
-                    position={[0.07, 0.16, -0.57]} 
+                    position={[0.07, 0.22, -0.52]}
                     rotation={[-Math.PI, 0.42, -Math.PI]}
                 >
                     {/* <Avatar animation={section === 0 ? "Typing" : "Standing"} /> */}
