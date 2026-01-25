@@ -21,18 +21,17 @@ export const RouteList = () => {
 
 useEffect(() => {
   setRoute(location)
-  console.log(location)
 }, [location, setRoute])
   
   return (
     <AnimatePresence initial={false}>
     <Routes location={location} key={location.pathname}>
-      <Route path="/" element={<HomeScreen />} />
+      <Route path="/" element={<HomeScreenV2 />} />
       <Route path="/about" element={<AboutScreen />} />
       <Route path="/skill" element={<SkillScreen />} />
       <Route path="/contact" element={<ContactScreen />} />
 
-      <Route path="/version2" element={<HomeScreenV2 />} />
+      <Route path="/version2" element={<HomeScreen />} />
     </Routes>
   </AnimatePresence>
   )

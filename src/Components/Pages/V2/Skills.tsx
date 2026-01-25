@@ -3,39 +3,35 @@ import React from "react"
 
 const skills = [
   {
-    title: "Threejs / React Three Fiber",
+    title: "Wordpress",
     level: 80
   },
   {
-    title: "React / React Native",
-    level: 90
+    title: "React / React Native / Next",
+    level: 95
   },
   {
     title: "Nodejs",
-    level: 90
+    level: 80
   },
   {
     title: "Typescript",
-    level: 60
+    level: 90
   },
   {
-    title: "3D Modeling",
-    level: 40
+    title: "Laravel",
+    level: 90
   },
 ]
 
 const languages = [
   {
-    title: "French",
+    title: "Filipino",
     level: 100
   },
   {
     title: "English",
     level: 80
-  },
-  {
-    title: "Japanese",
-    level: 20
   }
 ]
 

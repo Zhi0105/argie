@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { motion } from "framer-motion"
 import React from "react"
+import { motion } from "framer-motion"
+import Typical from "react-typical"
+import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa"
 
 export const About = (props: any) => {
   const { setSection } = props
@@ -11,8 +13,8 @@ export const About = (props: any) => {
         <br />
         <span className="bg-white px-1 italic">Argie</span>
       </h1>
-      <motion.p 
-        className="text-lg text-gray-600 mt-4"
+      <motion.div 
+        className="text-lg text-gray-900 mt-4"
         initial={{
           opacity: 0,
           y: 25
@@ -26,15 +28,35 @@ export const About = (props: any) => {
           delay: 1.5
         }}
       >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, fugiat.
-        {/* I'm a skilled software developer with experience in Typescript and Javascript, and expertise in frameworks like React, Node js, and Three js.  */}
-        <br />
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-        {/* I'm a quick learner and collaborate closely with clients to create efficient, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life! */}
-      </motion.p>
-      <motion.button
-        onClick={() => setSection(3)}
-        className={`bg-indigo-600 text-white py-4 px-8 rounded-lg font-bold text-lg mt-4 md:mt-16`}
+        <div className="greet_message mt-3 text-sm sm:text-base md:text-lg">
+          <label className="block mb-1 opacity-80">Never stop learning.</label>
+          <Typical
+            steps={[
+              'Focus on being productive instead of being busy.',
+              2000,
+              'It’s not a bug — it’s an undocumented feature.',
+              2000
+            ]}
+            loop={Infinity}
+            wrapper="p"
+          />
+
+          <div className="flex flex-row gap-4 mt-4">
+            <a href="https://www.linkedin.com/in/argie-barcena/" target="_blank">
+              <FaLinkedin size={24} className="text-[#4F46E5] hover:text-[#1c17a7] transition-colors" />
+            </a>
+            <a href="https://www.facebook.com/aia.argie" target="_blank">
+              <FaFacebook size={24} className="text-[#4F46E5] hover:text-[#1c17a7] transition-colors" />
+            </a>
+            <a href="https://github.com/Zhi0105" target="_blank">
+              <FaGithub size={24} className="text-[#4F46E5] hover:text-[#1c17a7] transition-colors" />
+            </a>
+            
+          </div>
+        </div>
+      </motion.div>
+      <motion.div 
+        className="flex gap-2"
         initial={{
           opacity: 0,
           y: 25
@@ -48,8 +70,22 @@ export const About = (props: any) => {
           delay: 2
         }}
       >
-        Contact me
-      </motion.button>
+        <button
+          onClick={() => setSection(3)}
+          className={`bg-indigo-600 text-white py-4 px-8 rounded-lg font-bold text-base mt-4 md:mt-16`}
+        >
+          Contact me
+        </button>
+        <a
+          href="./cv.pdf"
+          className={`bg-indigo-600 text-white py-4 px-8 rounded-lg font-bold text-base mt-4 md:mt-16`}
+
+        >
+          <span className="flex items-center gap-2">
+            Download CV
+          </span>
+        </a>
+      </motion.div>
     </React.Fragment>
   )
 }
