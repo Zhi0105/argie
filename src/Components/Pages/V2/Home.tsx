@@ -166,7 +166,7 @@ export const Home = (props:any) => {
             >
                 <Avatar animation={section === 0 ? "Typing" : "Standing"} wireframe={section === 1 } />
             </group>
-            <ambientLight intensity={1} />
+            <ambientLight intensity={3.5} />
             <group
                 ref={officeGroupRef}
                 position={[isMobile ? 0 : 1.5 * officeScaleRatio, isMobile ? -viewport.height / 6 : 2, 3]}
