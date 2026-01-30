@@ -72,14 +72,13 @@ export const About = (props: any) => {
       >
         <button
           onClick={() => setSection(3)}
-          className={`bg-indigo-600 text-white py-4 px-8 rounded-lg font-bold text-base mt-4 md:mt-16`}
+          className={`bg-indigo-600 text-white py-2 px-4 md:py-4 md:px-8 rounded-lg font-bold text-xs md:text-base mt-4 md:mt-16`}
         >
           Contact me
         </button>
         <a
           href="./cv.pdf"
-          className={`bg-indigo-600 text-white py-4 px-8 rounded-lg font-bold text-base mt-4 md:mt-16`}
-
+          className={`bg-indigo-600 text-white py-2 px-4 md:py-4 md:px-8 rounded-lg font-bold text-xs md:text-base mt-4 md:mt-16`}
         >
           <span className="flex items-center gap-2">
             Download CV

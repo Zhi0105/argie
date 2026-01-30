@@ -9,12 +9,12 @@ import { Mesh, MeshBasicMaterial } from "three";
 import * as THREE from 'three'
 
 export const projects = [
-  // {
-  //   title: "Wawatmos",
-  //   url: "https://r3f-wawatmos-final.vercel.app/",
-  //   image: "assets/projects/wawatmos.jpg",
-  //   description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, beatae.",
-  // },
+  {
+    title: "3D atmosphere",
+    url: "https://atmos-project-lac.vercel.app/",
+    image: "assets/projects/atmos.png",
+    description: "react 3D atmospheric project",
+  },
   {
     title: "Nuextend Website",
     url: "https://nuextend-web.vercel.app/",
